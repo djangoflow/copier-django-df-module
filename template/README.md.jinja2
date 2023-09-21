@@ -1,0 +1,46 @@
+# [[ project_title ]]
+
+[[ project_description ]]
+
+## Installation:
+
+- Install the package
+
+```
+pip install [[ pip_package_name ]]
+```
+
+
+- Include default `INSTALLED_APPS` from `[[ python_module_name ]].defaults` to your `settings.py`
+
+```python
+from [[ python_module_name ]].defaults import [[ python_module_name|upper ]]_INSTALLED_APPS
+
+INSTALLED_APPS = [
+    ...
+    *[[ python_module_name|upper ]]_INSTALLED_APPS,
+    ...
+]
+
+```
+
+
+## Development
+
+Installing dev requirements:
+
+```
+pip install -e .[test]
+```
+
+Installing pre-commit hook:
+
+```
+pre-commit install
+```
+
+Running tests:
+
+```
+pytest
+```

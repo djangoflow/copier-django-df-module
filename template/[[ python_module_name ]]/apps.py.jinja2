@@ -1,0 +1,10 @@
+from django.apps import AppConfig
+from django.utils.translation import gettext_lazy as _
+
+
+class [[ python_module_name.split('_')|map('capitalize')|join  ]]Config(AppConfig):
+    name = "[[ python_module_name ]]"
+    verbose_name = _("[[ project_title ]]")
+
+    class DFMeta:
+        api_path = "[[ python_module_name ]]/"
